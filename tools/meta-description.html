@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Free Meta Description Generator | SEO Tools Hub</title>
+
     <meta
       name="description"
-      content="Generate SEO-optimized meta descriptions instantly. Free meta description generator for bloggers, developers, and marketers."
+      content="Generate SEO optimized meta descriptions instantly. Free tool for bloggers, developers and marketers."
     />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -22,62 +27,109 @@
         }
       }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-gray-50 min-h-screen flex flex-col">
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+
     <div id="site-header"></div>
 
-    <main class="flex-grow p-6 max-w-3xl mx-auto">
-      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-        <h2 class="text-2xl font-bold mb-6">Generate SEO Meta Description</h2>
+    <main class="container section" style="position: relative; z-index: 2">
+      <div class="glass-card">
+        <h1 style="font-size: 28px; margin-bottom: 8px">
+          Meta Description Generator
+        </h1>
+        <p class="text-muted" style="margin-bottom: 30px">
+          Create compelling, SEO-optimized meta descriptions in seconds.
+        </p>
 
-        <label class="block font-semibold mb-2">Page Title</label>
-        <input
-          id="titleInput"
-          type="text"
-          class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-2 focus:ring-indigo-500 outline-none"
-          placeholder="Enter your page title"
-        />
+        <div class="grid" style="gap: 18px">
+          <input id="titleInput" class="input-dark" placeholder="Page Title" />
 
-        <label class="block font-semibold mb-2">Main Keywords</label>
-        <input
-          id="keywordInput"
-          type="text"
-          class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:ring-2 focus:ring-indigo-500 outline-none"
-          placeholder="e.g. SEO tools, meta generator"
-        />
+          <input
+            id="keywordInput"
+            class="input-dark"
+            placeholder="Main Keywords"
+          />
 
-        <label class="block font-semibold mb-2">Brief Description</label>
-        <textarea
-          id="descriptionInput"
-          class="w-full border border-gray-300 rounded-lg p-3 mb-6 focus:ring-2 focus:ring-indigo-500 outline-none"
-          rows="4"
-          placeholder="Describe what your page is about"
-        ></textarea>
+          <textarea
+            id="descriptionInput"
+            rows="4"
+            class="textarea-dark"
+            placeholder="Brief description of the page"
+          ></textarea>
 
-        <button
-          onclick="generateMeta()"
-          class="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
-        >
-          Generate Meta Description
-        </button>
+          <button id="generateBtn" class="btn-dark">
+            Generate Meta Description
+          </button>
+        </div>
       </div>
 
-      <div id="resultSection" class="mt-6 hidden">
-        <div class="bg-green-50 border border-green-200 p-4 rounded">
-          <h2 class="font-bold mb-2">Generated Meta Description:</h2>
-          <p id="metaOutput" class="mb-2"></p>
-          <p class="text-sm text-gray-600">
-            Character Count: <span id="charCount"></span> / 160
-          </p>
+      <div id="resultSection" class="hidden" style="margin-top: 40px">
+        <div class="serp-dark">
+          <div
+            id="previewTitle"
+            style="color: #60a5fa; font-weight: 500; margin-bottom: 6px"
+          ></div>
+
+          <div style="color: #22c55e; font-size: 14px; margin-bottom: 12px">
+            https://yourwebsite.com/page
+          </div>
+
+          <div id="metaOutput" style="color: #e5e7eb"></div>
+
+          <div
+            style="
+              margin-top: 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div style="font-size: 14px; color: #9ca3af">
+              Characters:
+              <span
+                id="charCount"
+                style="color: #60a5fa; font-weight: 600"
+              ></span>
+              / 160
+            </div>
+
+            <button
+              id="copyBtn"
+              class="btn-dark"
+              style="padding: 8px 16px; font-size: 13px"
+            >
+              Copy
+            </button>
+          </div>
         </div>
       </div>
     </main>
 
     <div id="site-footer"></div>
 
+    <div id="toast" class="toast">Copied to clipboard</div>
+
     <script src="/assets/js/shared.js" defer></script>
     <script src="/assets/js/meta-description.js" defer></script>
+
+    <script>
+      (function createParticles() {
+        const container = document.getElementById("particles");
+        const qty = 60;
+        const rand = (min, max) => Math.random() * (max - min) + min;
+
+        for (let i = 0; i < qty; i++) {
+          const p = document.createElement("span");
+          p.className = "particle";
+          p.style.left = rand(0, 100) + "%";
+          p.style.animationDuration = rand(10, 18) + "s";
+          p.style.opacity = rand(0.2, 0.8);
+          p.style.width = p.style.height = rand(4, 8) + "px";
+          container.appendChild(p);
+        }
+      })();
+    </script>
   </body>
 </html>

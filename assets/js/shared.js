@@ -1,26 +1,39 @@
 function loadLayout() {
   const header = `
-  <header class="bg-indigo-600 text-white">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/" class="text-xl font-bold">SEO Tools Hub</a>
-      <nav class="space-x-6 text-sm">
-        <a href="/" class="hover:underline">Home</a>
-        <a href="/tools/meta-description.html" class="hover:underline">Meta Tool</a>
-      </nav>
-    </div>
-  </header>
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="/" style="font-weight:700;color:white;text-decoration:none;">
+          SEO Tools Hub
+        </a>
+
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/tools/meta-description.html">Meta Tool</a>
+          <a href="/tools/title-tag.html">Title Tool</a>
+          <a href="/" class="nav-cta">All Tools</a>
+        </nav>
+      </div>
+    </header>
   `;
 
   const footer = `
-  <footer class="bg-gray-100 mt-12">
-    <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-600 text-center">
-      © 2026 SEO Tools Hub. Built for developers & marketers.
-    </div>
-  </footer>
+    <footer class="footer">
+      © ${new Date().getFullYear()} SEO Tools Hub • Built for marketers & developers
+    </footer>
   `;
 
   document.getElementById("site-header").innerHTML = header;
   document.getElementById("site-footer").innerHTML = footer;
+
+  // highlight active link
+  const links = document.querySelectorAll(".nav-links a");
+  const path = location.pathname.replace(/\/$/, "");
+  links.forEach((link) => {
+    if (link.getAttribute("href") === path) {
+      link.style.color = "white";
+      link.style.fontWeight = "600";
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", loadLayout);

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Title Tag Generator | SEO Tools Hub</title>
+    <meta
+      name="description"
+      content="Create SEO-optimized title tags. Generate multiple variations, check length, and preview how your title looks in search."
+    />
+
+    <!-- global CSS  -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+    <div id="site-header"></div>
+
+    <main class="container section" style="position: relative; z-index: 2">
+      <div class="glass-card" style="margin-bottom: 20px">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+          "
+        >
+          <div>
+            <h1 style="font-size: 28px; margin-bottom: 6px">
+              Title Tag Generator
+            </h1>
+            <p class="text-muted" style="margin-bottom: 0">
+              Create optimized page titles that improve CTR and avoid Google
+              truncation.
+            </p>
+          </div>
+
+          <div style="text-align: right">
+            <span class="text-muted" style="font-size: 13px"
+              >Free • No signup</span
+            >
+          </div>
+        </div>
+
+        <div style="margin-top: 20px" class="grid">
+          <input
+            id="topicInput"
+            class="input-dark"
+            placeholder="Page topic (what the page is about)"
+          />
+          <input
+            id="keywordInput"
+            class="input-dark"
+            placeholder="Main keyword (primary search term)"
+          />
+          <input
+            id="brandInput"
+            class="input-dark"
+            placeholder="Brand (optional) e.g. SEO Tools Hub"
+          />
+
+          <div style="display: flex; gap: 10px; align-items: center">
+            <label
+              style="
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                color: rgba(255, 255, 255, 0.85);
+              "
+            >
+              <input id="includeYear" type="checkbox" />
+              <span style="font-size: 14px">Include current year</span>
+            </label>
+
+            <label
+              style="
+                margin-left: auto;
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 13px;
+              "
+            >
+              Variations:
+              <select
+                id="variationsCount"
+                style="
+                  margin-left: 6px;
+                  padding: 6px 8px;
+                  border-radius: 8px;
+                  background: rgba(255, 255, 255, 0.03);
+                  color: #fff;
+                  border: 1px solid rgba(255, 255, 255, 0.04);
+                "
+              >
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+              </select>
+            </label>
+          </div>
+
+          <button id="generateTitleBtn" class="btn-dark">
+            Generate Title Tag Variations
+          </button>
+
+          <div class="small-tip">
+            Tip: Titles under ~60 characters usually avoid Google truncation on
+            desktop. Use brand at the end for recognition.
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="resultBlock" class="hidden">
+        <div class="serp-dark" style="padding: 18px 20px">
+          <div class="preview-label">Google Search Preview</div>
+          <div
+            id="previewTitle"
+            style="
+              font-size: 17px;
+              font-weight: 600;
+              color: #9ecbff;
+              margin-bottom: 6px;
+              cursor: default;
+            "
+          ></div>
+          <div style="color: #22c55e; font-size: 13px; margin-bottom: 12px">
+            https://yourwebsite.com/page
+          </div>
+
+          <div id="variationsList" style="margin-top: 6px"></div>
+
+          <div
+            style="
+              margin-top: 12px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div style="font-size: 13px; color: rgba(255, 255, 255, 0.7)">
+              Selected title length:
+              <span id="charCount" style="font-weight: 600"></span> / 60
+            </div>
+            <div>
+              <button
+                id="copySelectedBtn"
+                class="btn-dark"
+                style="padding: 8px 14px"
+              >
+                Copy Selected
+              </button>
+            </div>
+          </div>
+
+          <div class="small-tip" style="margin-top: 14px">
+            <strong>SEO Tips:</strong>
+            <ul
+              style="
+                margin-top: 8px;
+                color: rgba(255, 255, 255, 0.66);
+                line-height: 1.5;
+              "
+            >
+              <li>
+                Put the primary keyword near the beginning if it reads
+                naturally.
+              </li>
+              <li>Avoid stuffing keywords. Use human-friendly language.</li>
+              <li>Include brand at the end to build recognition.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <div id="toast" class="toast">Copied to clipboard</div>
+
+    <!-- js files -->
+    <script src="/assets/js/shared.js" defer></script>
+    <script src="/assets/js/title-tag.js" defer></script>
+
+    <script>
+      (function createParticles() {
+        const container = document.getElementById("particles");
+        if (!container) return;
+        const qty = 60;
+        const rand = (min, max) => Math.random() * (max - min) + min;
+        for (let i = 0; i < qty; i++) {
+          const p = document.createElement("span");
+          p.className = "particle";
+          p.style.left = rand(0, 100) + "%";
+          p.style.animationDuration = rand(10, 18) + "s";
+          p.style.opacity = rand(0.15, 0.8);
+          const size = rand(4, 8);
+          p.style.width = p.style.height = size + "px";
+          container.appendChild(p);
+        }
+      })();
+    </script>
+  </body>
+</html>
