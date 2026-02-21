@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Blog — SEO Tools Hub</title>
+    <meta
+      name="description"
+      content="Practical SEO & AEO guides, tutorials and case studies — meta descriptions, title tags, schema, sitemaps and more."
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- open graphs -->
+    <meta property="og:title" content="Blog — SEO Tools Hub" />
+    <meta
+      property="og:description"
+      content="Practical SEO & AEO guides and tutorials for publishers, SEOs and devs."
+    />
+
+    <!-- canonical tag -->
+    <link rel="canonical" href="https://seo-aeo-tools.pages.dev/blogs/" />
+  </head>
+
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+    <div id="site-header"></div>
+
+    <main class="container section" style="position: relative; z-index: 2">
+      <div
+        style="
+          display: flex;
+          gap: 28px;
+          align-items: flex-start;
+          flex-wrap: wrap;
+        "
+      >
+        <div style="flex: 1 1 720px">
+          <header style="margin-bottom: 22px; padding: 1rem">
+            <h1 style="margin-bottom: 8px">SEO & AEO Blogs</h1>
+            <p class="text-muted">
+              Actionable guides, checklists and tutorials — written to help you
+              get results and productize the outputs with our tools.
+            </p>
+          </header>
+
+          <!-- Search -->
+          <div style="margin-bottom: 18px; padding: 1rem">
+            <input
+              id="blogSearch"
+              placeholder="Search blog posts..."
+              style="
+                width: 100%;
+                padding: 12px 14px;
+                border-radius: 10px;
+                border: 1px solid #e5e7eb;
+              "
+            />
+          </div>
+
+          <!-- Posts list -->
+          <div
+            id="postsList"
+            style="display: grid; gap: 18px; padding: 1rem"
+          ></div>
+
+          <!-- Pagination (simple) -->
+          <div
+            id="postsPagination"
+            style="
+              margin-top: 22px;
+              display: flex;
+              gap: 8px;
+              align-items: center;
+            "
+          ></div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside style="width: 320px">
+          <div class="card" style="padding: 20px">
+            <h3 style="margin-bottom: 10px">Featured tools</h3>
+            <ul
+              style="
+                list-style: none;
+                padding: 1rem 0;
+                margin: 0;
+                display: grid;
+                gap: 8px;
+              "
+            >
+              <li style="padding: 1rem 0">
+                <a class="card-btn" href="/tools/meta-description.html"
+                  >Meta Description Generator →</a
+                >
+              </li>
+              <li style="padding: 1rem 0">
+                <a class="card-btn" href="/tools/title-tag.html"
+                  >Title Tag Optimizer →</a
+                >
+              </li>
+              <li style="padding: 1rem 0">
+                <a class="card-btn" href="/tools/schema-generator.html"
+                  >Schema Markup Generator →</a
+                >
+              </li>
+              <li style="padding: 1rem 0">
+                <a class="card-btn" href="/tools/sitemap-generator.html"
+                  >Sitemap.xml Generator →</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-top: 16px; padding: 18px">
+            <h4 style="margin-bottom: 8px">Newsletter</h4>
+            <p class="text-muted" style="margin-bottom: 10px">
+              Get practical SEO & AEO tips each week.
+            </p>
+            <form id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Your email"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: 1px solid #e5e7eb;
+                  margin-bottom: 8px;
+                "
+              />
+              <button class="btn-primary" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <!-- schemas  -->
+    <script type="application/ld+json" id="blog-list-schema">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "SEO Tools Hub",
+        "url": "https://seo-aeo-tools.pages.dev/blogs/",
+        "description": "Actionable SEO & AEO guides and tutorials.",
+        "blogPost": []
+      }
+    </script>
+
+    <script src="/assets/js/shared.js" defer></script>
+    <script src="/assets/js/blogs-hub.js" defer></script>
+  </body>
+</html>

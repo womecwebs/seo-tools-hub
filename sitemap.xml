@@ -1,12 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://yourdomain.com/</loc>
-  </url>
-  <url>
-    <loc>https://yourdomain.com/tools/meta-description.html</loc>
-  </url>
-  <url>
-    <loc>https://yourdomain.com/tools/title-tag.html</loc>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://seo-tools-hub.pages.dev/</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/blog-posts/blogs.html</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/meta-description</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/title-tag</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/schema-generator</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/sitemap-generator</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/robots-txt-generator</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/open-graph-generator</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/seo-content-outline</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/image-alt-text-generator</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/blog-idea-generator</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/blog/how-to-write-meta-descriptions.html</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/blog/schema-best-practices.html</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/blog/sitemap-strategy.html</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/tools/url-slug-generator</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/pages/about</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/blog/</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/pages/contact</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/faqs</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/pages/privacy-policy</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/pages/terms-of-service</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://seo-tools-hub.pages.dev/pages/disclaimer</loc>
+  <lastmod>2026-02-21T21:49:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>

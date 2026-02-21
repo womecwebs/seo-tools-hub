@@ -1,0 +1,86 @@
+<main class="container section" style="position: relative; z-index: 2">
+  <article class="glass-card">
+    <nav aria-label="Breadcrumb" style="margin-bottom: 12px">
+      <a style="color: white; text-decoration: none" href="/">Home</a> ›
+      <a style="color: white; text-decoration: none" href="/blog/">Blog</a>
+      ›
+      <span aria-current="page">{{TITLE}}</span>
+    </nav>
+
+    <header>
+      <h1>{{TITLE}}</h1>
+      <div style="color: var(--text-muted); margin-bottom: 14px">
+        {{DATE}} • <span id="readTime">—</span> • {{TAGS}}
+      </div>
+      <img
+        src="{{COVER_IMAGE}}"
+        alt="{{TITLE}}"
+        style="
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: 14px;
+          object-fit: cover;
+        "
+      />
+    </header>
+
+    <!-- CTA / Tools -->
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px">
+      {{TOOL_LINKS}}
+    </div>
+
+    <!-- Table of Contents placeholder -->
+    <div id="toc" style="margin-bottom: 18px"></div>
+
+    <!-- CONTENT -->
+    <section
+      id="postContent"
+      style="color: var(--text-muted); line-height: 1.8"
+    >
+      {{CONTENT_HTML}}
+    </section>
+
+    <!-- FAQ block (visible answers) -->
+    <section style="margin-top: 28px">
+      <h2>Frequently asked questions</h2>
+      <div id="faqList">
+        <!-- Insert FAQ items as:
+             <div class="faq-item"><div class="faq-question">Q?</div><div class="faq-answer">A</div></div>
+             Use the FAQ generator / editor when publishing.
+          -->
+        {{FAQ_ITEMS}}
+      </div>
+    </section>
+
+    <!-- Author box -->
+    <aside
+      style="
+        margin-top: 24px;
+        padding: 12px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.02);
+      "
+    >
+      <strong>{{AUTHOR}}</strong>
+      <p class="text-muted">
+        Author bio and credentials. Follow for weekly SEO & AEO tips.
+      </p>
+    </aside>
+
+    <!-- Related posts -->
+    <section style="margin-top: 20px">
+      <h3>Related posts</h3>
+      <div id="relatedPosts">{{RELATED_POSTS}}</div>
+    </section>
+
+    <!-- CTA -->
+    <div style="margin-top: 24px; display: flex; gap: 10px; flex-wrap: wrap">
+      <a class="btn-primary" href="/tools/meta-description.html"
+        >Try the Meta Description Generator</a
+      >
+      <a class="btn-primary" href="/tools/seo-content-outline.html"
+        >Create an Outline</a
+      >
+    </div>
+  </article>
+</main>
