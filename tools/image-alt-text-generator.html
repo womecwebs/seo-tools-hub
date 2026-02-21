@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Image Alt Text Generator | SEO Tools Hub</title>
+    <meta
+      name="description"
+      content="Generate SEO-friendly and accessibility-optimized image alt text. Improve rankings and accessibility instantly."
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+    <div id="site-header"></div>
+
+    <main class="container section">
+      <div class="glass-card">
+        <h1>Image Alt Text Generator</h1>
+        <p class="text-muted">
+          Generate SEO-friendly, accessibility-optimized alt text for blog
+          images, products, and landing pages.
+        </p>
+
+        <div class="grid" style="margin-top: 20px">
+          <div>
+            <label>Describe the Image</label>
+            <textarea
+              id="imageDesc"
+              class="textarea-dark"
+              rows="3"
+              placeholder="Example: A woman working on a laptop in a modern coffee shop"
+            ></textarea>
+          </div>
+
+          <div>
+            <label>Target Keyword (Optional)</label>
+            <input
+              id="targetKeyword"
+              class="input-dark"
+              placeholder="Example: remote work tips"
+            />
+          </div>
+
+          <div>
+            <label>Image Purpose</label>
+            <select
+              id="imagePurpose"
+              class="input-dark"
+              style="background: #0f172a"
+            >
+              <option value="informational">
+                Informational (Blog Content)
+              </option>
+              <option value="product">Product Image</option>
+              <option value="decorative">Decorative Image</option>
+              <option value="hero">Hero / Featured Image</option>
+            </select>
+          </div>
+
+          <button id="generateAlt" class="btn-dark">Generate Alt Text</button>
+        </div>
+      </div>
+
+      <div id="altResult" class="hidden" style="margin-top: 30px">
+        <div class="serp-dark">
+          <div class="preview-label">Generated Alt Text Variations</div>
+          <pre id="altOutput" style="white-space: pre-wrap"></pre>
+
+          <div style="margin-top: 15px; display: flex; gap: 10px">
+            <button id="copyAlt" class="btn-dark">Copy</button>
+            <button id="downloadAlt" class="btn-dark">Download</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="/assets/js/image-alt-generator.js" defer></script>
+    <script src="/assets/js/shared.js" defer></script>
+  </body>
+</html>

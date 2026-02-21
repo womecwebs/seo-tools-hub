@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Free Blog Idea Generator | SEO Tools Hub</title>
+
+    <meta
+      name="description"
+      content="Generate SEO optimized blog ideas with search intent and monetization angles. Free professional blog topic generator tool."
+    />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Blog Idea Generator",
+        "applicationCategory": "SEO Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+
+    <div id="site-header"></div>
+
+    <main class="container section" style="position: relative; z-index: 2">
+      <div class="glass-card">
+        <h1 style="font-size: 28px; margin-bottom: 8px">Blog Idea Generator</h1>
+
+        <p class="text-muted" style="margin-bottom: 30px">
+          Generate high-ranking blog ideas with search intent and monetization
+          strategy.
+        </p>
+
+        <div class="grid" style="gap: 18px">
+          <input
+            id="keywordInput"
+            class="input-dark"
+            placeholder="Main Keyword (e.g., AI tools)"
+          />
+
+          <input
+            id="nicheInput"
+            class="input-dark"
+            placeholder="Niche (e.g., Digital Marketing)"
+          />
+
+          <input
+            id="audienceInput"
+            class="input-dark"
+            placeholder="Target Audience (e.g., Beginners)"
+          />
+
+          <select id="goalInput" class="input-dark">
+            <option value="traffic">Traffic (Ads & SEO)</option>
+            <option value="affiliate">Affiliate Revenue</option>
+            <option value="authority">Authority Building</option>
+            <option value="leads">Lead Generation</option>
+          </select>
+
+          <button id="generateBtn" class="btn-dark">Generate Blog Ideas</button>
+        </div>
+      </div>
+
+      <div id="resultSection" class="hidden" style="margin-top: 40px">
+        <div class="serp-dark">
+          <div class="preview-label">Generated Ideas</div>
+
+          <div id="ideasContainer"></div>
+
+          <div
+            style="
+              margin-top: 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div class="small-tip">
+              Includes search intent & monetization angle
+            </div>
+
+            <button
+              id="copyAllBtn"
+              class="btn-dark"
+              style="padding: 8px 16px; font-size: 13px"
+            >
+              Copy All
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <div id="toast" class="toast">Copied to clipboard</div>
+
+    <script src="/assets/js/shared.js" defer></script>
+    <script src="/assets/js/blog-idea-generator.js" defer></script>
+  </body>
+</html>
