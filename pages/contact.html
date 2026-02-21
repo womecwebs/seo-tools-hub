@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – SEO Tools Hub</title>
+    <meta
+      name="description"
+      content="Contact SEO Tools Hub — send feedback, report bugs or request features."
+    />
+    <link
+      rel="canonical"
+      href="https://seo-aeo-tools.pages.dev/pages/contact.html"
+    />
+    <meta property="og:title" content="Contact – SEO Tools Hub" />
+    <meta
+      property="og:description"
+      content="Contact SEO Tools Hub — send feedback, report bugs or request features."
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+
+    <div id="site-header"></div>
+
+    <main class="container section" style="position: relative; z-index: 2">
+      <div class="glass-card">
+        <h1>Contact</h1>
+        <p class="text-muted">
+          Have feedback, found a bug, or want to partner? Use the form below or
+          email us directly.
+        </p>
+
+        <form
+          id="contactForm"
+          style="display: grid; gap: 12px; margin-top: 16px"
+        >
+          <input id="name" class="input-dark" placeholder="Your name" />
+          <input id="email" class="input-dark" placeholder="Your email" />
+          <input id="subject" class="input-dark" placeholder="Subject" />
+          <textarea
+            id="message"
+            class="textarea-dark"
+            rows="6"
+            placeholder="Message"
+          ></textarea>
+
+          <div style="display: flex; gap: 12px; align-items: center">
+            <button type="submit" class="btn-dark">Send Message</button>
+            <div
+              id="contactMsg"
+              class="text-muted"
+              style="font-size: 14px"
+            ></div>
+          </div>
+        </form>
+
+        <h3 style="margin-top: 22px">Other ways to reach us</h3>
+        <p class="text-muted">
+          Email:
+          <a href="mailto:hello@seo-aeo-tools.pages.dev"
+            >joshaffilly@gmail.com</a
+          >
+        </p>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+          const msg = document.getElementById("contactMsg");
+          if (!name || !email || !message) {
+            msg.innerText = "Please fill name, email and message.";
+            return;
+          }
+          // Simple UX: create mailto link so user can send with their email client
+          const subject = encodeURIComponent(
+            document.getElementById("subject").value || "Message from website",
+          );
+          const body = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\n${message}`,
+          );
+          window.location.href = `mailto:joshaffilly@gmail.com?subject=${subject}&body=${body}`;
+        });
+    </script>
+
+    <script src="/assets/js/shared.js" defer></script>
+  </body>
+</html>

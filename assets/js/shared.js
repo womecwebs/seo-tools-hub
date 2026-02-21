@@ -17,7 +17,113 @@ function loadLayout() {
 
   const footer = `
     <footer class="footer">
-      © ${new Date().getFullYear()} SEO Tools Hub • Built for marketers & developers
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+            justify-content: space-between;
+          "
+        >
+          <div>
+            <strong style="color: white">SEO Tools Hub</strong>
+            <p class="text-muted" style="max-width: 420px">
+              Free professional tools to help publishers, agencies and
+              developers optimize content for search engines and answer engines.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 28px; flex-wrap: wrap">
+            <div class="footer-content">
+              <h3 style="color: white; font-size: 15px; margin-bottom: 8px">
+                Tools
+              </h3>
+              <ul style="list-style: none; padding: 0; line-height: 1.9">
+                <li>
+                  <a href="/tools/robots-txt-generator.html"
+                    >Robots.txt Generator</a
+                  >
+                </li>
+                <li>
+                  <a href="/tools/meta-description.html"
+                    >Meta Description Generator</a
+                  >
+                </li>
+                <li>
+                  <a href="/tools/schema-generator.html">Schema Generator</a>
+                </li>
+                <li>
+                  <a href="/tools/sitemap-generator.html">Sitemap Generator</a>
+                </li>
+                <li>
+                  <a href="/tools/open-graph-generator.html"
+                    >Open Graph Meta Tag Generator</a
+                  >
+                </li>
+                <li>
+                  <a href="/tools/title-tag.html">Title Tag Optimizer</a>
+                </li>
+                <li>
+                  <a href="/tools/image-alt-text-generator.html"
+                    >Image Alt Text Generator</a
+                  >
+                </li>
+                <li>
+                  <a href="/tools/seo-content-outline.html"
+                    >SEO Content Outline Generator</a
+                  >
+                </li>
+                <li>
+                  <a href="/tools/blog-idea-generator.html"
+                    >Free Blog Idea Generator</a
+                  >
+                </li>
+                <li>
+                  <a href="/tools/url-slug-generator.html"
+                    >URL Slug Generator</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-content">
+              <h3 style="color: white; font-size: 15px; margin-bottom: 8px">
+                Company
+              </h3>
+              <ul style="list-style: none; padding: 0; line-height: 1.9">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-content">
+              <h3 style="color: white; font-size: 15px; margin-bottom: 8px">
+                Legal
+              </h3>
+              <ul style="list-style: none; padding: 0; line-height: 1.9">
+                <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/pages/terms-of-service.html">Terms</a></li>
+                <li><a href="/pages/disclaimer.html">Disclaimer</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            margin-top: 28px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+          "
+        >      
+      © ${new Date().getFullYear()} SEO Tools Hub • Built for marketers, publishers & developers
+      </div>
+      </div>
     </footer>
   `;
 
