@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Free Sitemap.xml Generator | SEO Tools Hub</title>
+
+    <meta
+      name="description"
+      content="Generate a fully valid XML sitemap instantly. Bulk URL input, priority control, change frequency, last modified date and downloadable sitemap.xml file."
+    />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Sitemap XML Generator",
+        "applicationCategory": "SEO Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+
+    <div id="site-header"></div>
+
+    <main class="container section" style="position: relative; z-index: 2">
+      <div class="glass-card">
+        <h1 style="font-size: 28px; margin-bottom: 8px">
+          Sitemap.xml Generator
+        </h1>
+
+        <p class="text-muted" style="margin-bottom: 30px">
+          Create a fully valid XML sitemap for search engines in seconds.
+        </p>
+
+        <div class="grid" style="gap: 18px">
+          <textarea
+            id="urlsInput"
+            rows="6"
+            class="textarea-dark"
+            placeholder="Enter URLs (one per line)
+https://example.com/
+https://example.com/about"
+          ></textarea>
+
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 18px">
+            <select id="changeFreq" class="input-dark">
+              <option value="always">Always</option>
+              <option value="hourly">Hourly</option>
+              <option value="daily" selected>Daily</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+              <option value="never">Never</option>
+            </select>
+
+            <select id="priority" class="input-dark">
+              <option value="1.0">Priority 1.0</option>
+              <option value="0.9">Priority 0.9</option>
+              <option value="0.8" selected>Priority 0.8</option>
+              <option value="0.7">Priority 0.7</option>
+              <option value="0.6">Priority 0.6</option>
+              <option value="0.5">Priority 0.5</option>
+            </select>
+          </div>
+
+          <input type="date" id="lastMod" class="input-dark" />
+
+          <button id="generateBtn" class="btn-dark">
+            Generate Sitemap.xml
+          </button>
+
+          <div class="small-tip">
+            ✔ Fully valid XML format • ✔ Downloadable file • ✔ Search-engine
+            ready
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULT -->
+      <div id="resultSection" class="hidden" style="margin-top: 40px">
+        <div class="serp-dark">
+          <div class="preview-label">Generated XML Sitemap</div>
+
+          <pre
+            id="sitemapOutput"
+            style="white-space: pre-wrap; font-size: 13px; color: #e5e7eb"
+          ></pre>
+
+          <div
+            style="
+              margin-top: 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div style="font-size: 14px; color: #9ca3af">
+              URLs:
+              <span
+                id="urlCount"
+                style="color: #60a5fa; font-weight: 600"
+              ></span>
+            </div>
+
+            <div style="display: flex; gap: 10px">
+              <button
+                id="copyBtn"
+                class="btn-dark"
+                style="padding: 8px 16px; font-size: 13px"
+              >
+                Copy
+              </button>
+
+              <button
+                id="downloadBtn"
+                class="btn-dark"
+                style="padding: 8px 16px; font-size: 13px"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEO CONTENT (for ranking) -->
+      <section style="margin-top: 80px; max-width: 800px">
+        <h2 style="margin-bottom: 15px">What is an XML Sitemap?</h2>
+        <p class="text-muted" style="margin-bottom: 30px">
+          An XML sitemap is a file that lists your website’s URLs to help search
+          engines like
+          <strong>Google</strong> discover and crawl your content efficiently.
+        </p>
+
+        <h2 style="margin-bottom: 15px">Why is a Sitemap Important for SEO?</h2>
+        <ul class="text-muted" style="line-height: 1.8">
+          <li>Improves crawl efficiency</li>
+          <li>Helps index new pages faster</li>
+          <li>Supports large websites</li>
+          <li>Essential for technical SEO</li>
+        </ul>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <div id="toast" class="toast">Copied to clipboard</div>
+
+    <script src="/assets/js/shared.js" defer></script>
+    <script src="/assets/js/sitemap-generator.js" defer></script>
+
+    <script>
+      (function createParticles() {
+        const container = document.getElementById("particles");
+        const qty = 60;
+        const rand = (min, max) => Math.random() * (max - min) + min;
+
+        for (let i = 0; i < qty; i++) {
+          const p = document.createElement("span");
+          p.className = "particle";
+          p.style.left = rand(0, 100) + "%";
+          p.style.animationDuration = rand(10, 18) + "s";
+          p.style.opacity = rand(0.2, 0.8);
+          p.style.width = p.style.height = rand(4, 8) + "px";
+          container.appendChild(p);
+        }
+      })();
+    </script>
+  </body>
+</html>

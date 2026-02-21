@@ -8,8 +8,7 @@ function loadLayout() {
 
         <nav class="nav-links">
           <a href="/">Home</a>
-          <a href="/tools/meta-description.html">Meta Tool</a>
-          <a href="/tools/title-tag.html">Title Tool</a>
+          <a href="/blog-posts/blogs.html">Blogs</a>
           <a href="/" class="nav-cta">All Tools</a>
         </nav>
       </div>
