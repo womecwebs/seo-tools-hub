@@ -161,23 +161,5 @@ https://example.com/about"
 
     <script src="/assets/js/shared.js" defer></script>
     <script src="/assets/js/sitemap-generator.js" defer></script>
-
-    <script>
-      (function createParticles() {
-        const container = document.getElementById("particles");
-        const qty = 60;
-        const rand = (min, max) => Math.random() * (max - min) + min;
-
-        for (let i = 0; i < qty; i++) {
-          const p = document.createElement("span");
-          p.className = "particle";
-          p.style.left = rand(0, 100) + "%";
-          p.style.animationDuration = rand(10, 18) + "s";
-          p.style.opacity = rand(0.2, 0.8);
-          p.style.width = p.style.height = rand(4, 8) + "px";
-          container.appendChild(p);
-        }
-      })();
-    </script>
   </body>
 </html>

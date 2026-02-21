@@ -21,12 +21,16 @@ function loadLayout() {
     </footer>
   `;
 
-  document.getElementById("site-header").innerHTML = header;
-  document.getElementById("site-footer").innerHTML = footer;
+  const headerContainer = document.getElementById("site-header");
+  const footerContainer = document.getElementById("site-footer");
+
+  if (headerContainer) headerContainer.innerHTML = header;
+  if (footerContainer) footerContainer.innerHTML = footer;
 
   // highlight active link
   const links = document.querySelectorAll(".nav-links a");
   const path = location.pathname.replace(/\/$/, "");
+
   links.forEach((link) => {
     if (link.getAttribute("href") === path) {
       link.style.color = "white";
@@ -35,4 +39,25 @@ function loadLayout() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", loadLayout);
+function createParticles() {
+  const container = document.getElementById("particles");
+  if (!container) return;
+
+  const qty = 60;
+  const rand = (min, max) => Math.random() * (max - min) + min;
+
+  for (let i = 0; i < qty; i++) {
+    const p = document.createElement("span");
+    p.className = "particle";
+    p.style.left = rand(0, 100) + "%";
+    p.style.animationDuration = rand(10, 18) + "s";
+    p.style.opacity = rand(0.2, 0.8);
+    p.style.width = p.style.height = rand(4, 8) + "px";
+    container.appendChild(p);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadLayout();
+  createParticles();
+});

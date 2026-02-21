@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Advanced Schema Markup Builder | SEO Tools Hub</title>
+    <meta
+      name="description"
+      content="Create schema.org JSON-LD for Article, Product, LocalBusiness, Organization, Person, FAQ, and HowTo. Generate, validate, copy & download ready-to-use structured data."
+    />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Advanced Schema Markup Builder",
+        "applicationCategory": "SEO Tool",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
+  </head>
+
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+    <div id="site-header"></div>
+
+    <main class="container section" style="position: relative; z-index: 2">
+      <div class="glass-card">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+          "
+        >
+          <div>
+            <h1 style="font-size: 26px; margin-bottom: 6px">
+              Advanced Schema Markup Builder
+            </h1>
+            <p class="text-muted" style="margin-bottom: 0">
+              Generate JSON-LD for Article, Product, LocalBusiness,
+              Organization, Person, FAQ & HowTo.
+            </p>
+          </div>
+          <div style="text-align: right">
+            <span class="text-muted" style="font-size: 13px"
+              >Free • No signup</span
+            >
+          </div>
+        </div>
+
+        <div style="margin-top: 18px" class="grid">
+          <label style="font-size: 13px; color: rgba(255, 255, 255, 0.8)"
+            >Select schema type</label
+          >
+          <select
+            id="schemaType"
+            class="input-dark"
+            style="background: #0f172a"
+          >
+            <option value="Article">Article</option>
+            <option value="Product">Product</option>
+            <option value="LocalBusiness">LocalBusiness</option>
+            <option value="Organization">Organization</option>
+            <option value="Person">Person</option>
+            <option value="FAQPage">FAQ (FAQPage)</option>
+            <option value="HowTo">HowTo</option>
+          </select>
+
+          <div id="formArea"></div>
+
+          <div style="display: flex; gap: 12px">
+            <button id="generateBtn" class="btn-dark">Generate JSON-LD</button>
+            <button
+              id="validateBtn"
+              class="btn-dark"
+              style="background: rgba(255, 255, 255, 0.06)"
+            >
+              Validate
+            </button>
+          </div>
+
+          <div class="small-tip">
+            Tip: Add complete fields (title, url, image, author, datePublished)
+            for Article. For FAQ, add question/answer pairs. Use secure image
+            URLs (https).
+          </div>
+        </div>
+      </div>
+
+      <!-- result -->
+      <div id="resultBlock" class="hidden" style="margin-top: 20px">
+        <div class="serp-dark">
+          <div class="preview-label">Generated JSON-LD (copy / download)</div>
+
+          <pre
+            id="jsonOutput"
+            style="
+              white-space: pre-wrap;
+              font-size: 13px;
+              color: #e5e7eb;
+              max-height: 420px;
+              overflow: auto;
+            "
+          ></pre>
+
+          <div
+            style="
+              margin-top: 14px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div class="validation-box" style="margin-top: 10px">
+              <div id="validationStatus" class="validation-status">
+                Validation: validated
+              </div>
+              <ul id="validationMessages" class="validation-messages"></ul>
+
+              <div
+                style="
+                  margin-top: 10px;
+                  display: flex;
+                  gap: 8px;
+                  flex-wrap: wrap;
+                "
+              >
+                <button
+                  id="googleTestBtn"
+                  class="btn-dark"
+                  style="font-size: 12px; padding: 6px 10px"
+                >
+                  Test with Google
+                </button>
+                <button
+                  id="schemaOrgBtn"
+                  class="btn-dark"
+                  style="font-size: 12px; padding: 6px 10px"
+                >
+                  Test with Schema.org
+                </button>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 10px">
+              <button
+                id="copyJsonBtn"
+                class="btn-dark"
+                style="padding: 8px 12px; font-size: 13px"
+              >
+                Copy
+              </button>
+              <button
+                id="downloadJsonBtn"
+                class="btn-dark"
+                style="padding: 8px 12px; font-size: 13px"
+              >
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEO guidance (long-form content for ranking) -->
+      <section style="margin-top: 36px; max-width: 900px">
+        <h2 style="margin-bottom: 10px">
+          Why structured data matters (AEO + SEO)
+        </h2>
+        <p class="text-muted">
+          Structured data (JSON-LD) helps search engines and AI answer engines
+          understand your content. Adding accurate schema increases the chance
+          of rich results, knowledge panels, and answer engine citations. Use
+          schema for content clarity: article metadata, FAQs, product details,
+          local business info, and how-to steps.
+        </p>
+
+        <h3 style="margin-top: 18px">Best practices</h3>
+        <ul class="text-muted" style="line-height: 1.8">
+          <li>Only include schema fields that exist on the page.</li>
+          <li>Use canonical URLs and secure (https) image URLs.</li>
+          <li>Keep FAQ answers concise and helpful (AEO-friendly).</li>
+          <li>
+            Validate JSON-LD with Google Rich Results Test and Schema
+            validators.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <div id="toast" class="toast">Copied</div>
+
+    <script src="/assets/js/shared.js" defer></script>
+    <script src="/assets/js/schema-builder.js" defer></script>
+  </body>
+</html>

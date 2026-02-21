@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Open Graph Meta Tag Generator | SEO Tools Hub</title>
+
+    <meta
+      name="description"
+      content="Generate Open Graph and Twitter Card meta tags with live preview. Optimize your social media link previews instantly."
+    />
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Open Graph Meta Tag Generator",
+        "applicationCategory": "SEO Tool",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+
+  <body class="dark-page">
+    <div class="particles" id="particles"></div>
+    <div id="site-header"></div>
+
+    <main class="container section" style="position: relative; z-index: 2">
+      <div class="glass-card">
+        <h1 style="font-size: 28px; margin-bottom: 8px">
+          Open Graph Meta Tag Generator
+        </h1>
+
+        <p class="text-muted" style="margin-bottom: 30px">
+          Create optimized Open Graph and Twitter Card meta tags with live
+          preview.
+        </p>
+
+        <div class="grid" style="gap: 18px">
+          <input id="ogTitle" class="input-dark" placeholder="Page Title" />
+          <textarea
+            id="ogDesc"
+            rows="3"
+            class="textarea-dark"
+            placeholder="Description"
+          ></textarea>
+          <input
+            id="ogUrl"
+            class="input-dark"
+            placeholder="Page URL (https://example.com)"
+          />
+          <input
+            id="ogImage"
+            class="input-dark"
+            placeholder="Image URL (1200x630 recommended)"
+          />
+
+          <select id="ogType" class="input-dark" style="background: #0f172a">
+            <option value="website">Website</option>
+            <option value="article">Article</option>
+            <option value="product">Product</option>
+          </select>
+
+          <label
+            style="
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              font-size: 14px;
+            "
+          >
+            <input type="checkbox" id="twitterCard" checked />
+            Include Twitter Card tags
+          </label>
+
+          <button id="generateBtn" class="btn-dark">
+            Generate Open Graph Tags
+          </button>
+        </div>
+      </div>
+
+      <!-- PREVIEW -->
+      <div id="previewSection" class="hidden" style="margin-top: 40px">
+        <div class="serp-dark">
+          <div class="preview-label">Social Preview</div>
+
+          <div
+            style="background: #0f172a; border-radius: 12px; overflow: hidden"
+          >
+            <img
+              id="previewImage"
+              style="width: 100%; max-height: 300px; object-fit: cover"
+            />
+            <div style="padding: 15px">
+              <div
+                id="previewTitle"
+                style="color: #e5e7eb; font-weight: 600"
+              ></div>
+              <div
+                id="previewDesc"
+                style="color: #9ca3af; font-size: 14px; margin-top: 6px"
+              ></div>
+              <div
+                id="previewUrl"
+                style="color: #60a5fa; font-size: 13px; margin-top: 8px"
+              ></div>
+            </div>
+          </div>
+
+          <pre id="metaOutput" style="margin-top: 20px; font-size: 13px"></pre>
+
+          <div style="margin-top: 15px; text-align: right">
+            <button
+              id="copyBtn"
+              class="btn-dark"
+              style="padding: 8px 16px; font-size: 13px"
+            >
+              Copy Meta Tags
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <div id="toast" class="toast">Copied to clipboard</div>
+
+    <script src="/assets/js/shared.js" defer></script>
+    <script src="/assets/js/open-graph-generator.js" defer></script>
+  </body>
+</html>
