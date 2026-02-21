@@ -72,7 +72,7 @@
           open graph tags and more.
         </p>
 
-        <a href="/tools/" class="btn-primary">Explore All Tools</a>
+        <a href="/tools.html" class="btn-primary">Explore All Tools</a>
       </div>
     </section>
 
@@ -283,48 +283,6 @@
       </div>
     </section>
 
-    <!-- NEWSLETTER CTA -->
-    <!-- <section class="section">
-      <div class="container">
-        <div class="card" style="padding: 22px">
-          <h3>Get practical SEO tips (free)</h3>
-          <p class="text-muted">
-            Join our newsletter for monthly templates, tool updates and
-            exclusive checklist downloads.
-          </p>
-
-          <form
-            id="newsletterForm"
-            style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px"
-          >
-            <input
-              id="newsletterEmail"
-              type="email"
-              placeholder="Your email address"
-              style="
-                padding: 12px;
-                border-radius: 10px;
-                border: 1px solid #e6eefc;
-                min-width: 240px;
-              "
-            />
-            <button
-              type="submit"
-              class="btn-primary"
-              style="padding: 12px 18px"
-            >
-              Subscribe
-            </button>
-          </form>
-          <p
-            id="newsletterMsg"
-            class="text-muted"
-            style="margin-top: 10px; font-size: 14px"
-          ></p>
-        </div>
-      </div>
-    </section> -->
-
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
@@ -407,6 +365,7 @@
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/pages/contact.html">Contact</a></li>
+                <li><a href="/faqs.html">FAQs</a></li>
               </ul>
             </div>
 
@@ -470,22 +429,6 @@
     <script>
       // footer year
       document.getElementById("year").innerText = new Date().getFullYear();
-
-      // newsletter simple (no backend) - saves email to localStorage and shows message
-      document
-        .getElementById("newsletterForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const email = document.getElementById("newsletterEmail").value.trim();
-          const msg = document.getElementById("newsletterMsg");
-          if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
-            msg.innerText = "Please enter a valid email address.";
-            return;
-          }
-          localStorage.setItem("seo_tools_newsletter", email);
-          msg.innerText =
-            "Thanks — saved locally (connect a mail provider to capture emails).";
-        });
 
       // sparkles (lightweight)
       (function createSparkles() {

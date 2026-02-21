@@ -97,6 +97,7 @@ function loadLayout() {
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/pages/contact.html">Contact</a></li>
+                <li><a href="/faqs.html">FAQs</a></li>
               </ul>
             </div>
 
