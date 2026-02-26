@@ -3,13 +3,17 @@ function loadLayout() {
     <header class="navbar">
       <div class="nav-container">
         <a href="/" style="font-weight:700;color:white;text-decoration:none;">
-          SEO Tools Hub
+          <img
+              class="logo"
+              src="/assets/images/logo.png"
+              alt="the logo os SEO and AEO website"
+              loading="lazy"
         </a>
 
         <nav class="nav-links">
           <a href="/">Home</a>
-          <a href="/blog-posts/blogs.html">Blogs</a>
-          <a href="/" class="nav-cta">All Tools</a>
+          <a href="/blogs.html">Blogs</a>
+          <a href="/tools.html" class="nav-cta">All Tools</a>
         </nav>
       </div>
     </header>
@@ -95,7 +99,7 @@ function loadLayout() {
               <ul style="list-style: none; padding: 0; line-height: 1.9">
                 <li><a href="/">Home</a></li>
                 <li><a href="/pages/about.html">About</a></li>
-                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/blogs.html">Blog</a></li>
                 <li><a href="/pages/contact.html">Contact</a></li>
                 <li><a href="/faqs.html">FAQs</a></li>
               </ul>
@@ -122,7 +126,7 @@ function loadLayout() {
             font-size: 14px;
           "
         >      
-      © ${new Date().getFullYear()} SEO Tools Hub • Built for marketers, publishers & developers
+      © ${new Date().getFullYear()} SEO & AEO Tools • Built for marketers, publishers & developers
       </div>
       </div>
     </footer>
